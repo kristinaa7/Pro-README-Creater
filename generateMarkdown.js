@@ -4,10 +4,15 @@ function renderLicenseBadge(license) {
 let licenseType = data.license
 let LicenseChoice = ''
 if (licenseType === MIT) {
-  LicenseChoice = `![License: MIT]`
-}
-
-}
+  LicenseChoice = `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`}
+else if (licenseType === ISC) {
+LicenseChoice = `![License: ISC]((https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)`}
+else if (licenseType === Mozilla) {
+LicenseChoice = `![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`}
+else {
+  licenseType = ''}
+return LicenseChoice;
+};
 
 
 // TODO: Create a function that returns the license link
