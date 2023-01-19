@@ -47,7 +47,7 @@ const questions = [
         name: 'tests', 
     },
     {
-        type: 'test',
+        type: 'list',
         message: 'License?',
         name: 'license', 
         choices: ['MIT', 'ISC','Mozilla'],
@@ -55,9 +55,11 @@ const questions = [
     },  ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, answers) {
-    fs.writeFile(fileName, generateMarkdown(answers), (err) =>
+function writeToFile(fileName, data) {
+    console.log("first", data);
+    fs.writeFile(`${fileName}`, data, (err) =>
     err ? console.log(err) : console.log('Yay! Successfully created a README.md!')
+    
   )
 }
 
@@ -65,9 +67,8 @@ function writeToFile(fileName, answers) {
 function init() {
     inquirer
     .prompt(questions)
-
-    .then((answers) => {
-        writeToFile('README.md', answers);
+    .then((data) => {
+        writeToFile('README.md', generateMarkdown(data));
     });
 }
 
