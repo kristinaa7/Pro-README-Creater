@@ -1,10 +1,9 @@
-//user needs to install node version 16 and type npm install in the terminal to work
-//inquirer package needed for this application
+//user needs to install node version 16 and inquirer package by typing npm install in the terminal to work
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./generateMarkdown.js');
 
-// // TODO: Create an array of questions for user input
+//array of user input questions with information to add in the README file
 const questions = [    
     {
         type: 'input',
@@ -54,15 +53,13 @@ const questions = [
         default: 'MIT',
     },  ];
 
-// TODO: Create a function to write README file
+//the function writes README file and will print on the console if the file was sucessfully created or not
 function writeToFile(fileName, data) {
     fs.writeFile(`${fileName}`, data, (err) =>
-    err ? console.log(err) : console.log('Yay! Successfully created a README.md!')
-    
-  )
+    err ? console.log(err) : console.log('Yay! Successfully created a README.md!'))
 }
 
-// // TODO: Create a function to initialize app
+//the function initializes the app and calls on the inquirer to run the prompt questions
 function init() {
     inquirer
     .prompt(questions)
@@ -71,5 +68,5 @@ function init() {
     });
 }
 
-// // Function call to initialize app
+//calls the function 'init' above to initialize app
 init();
