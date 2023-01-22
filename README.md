@@ -1,4 +1,4 @@
-# f 
+# d 
 
   ## Table of Contents
 * [Description](#description)
@@ -10,24 +10,24 @@
 * [Questions](#questions)
 
 ## Description
-a
+d
 
 ## Installation
-s
+d
 
 ## Usage
-f
+d
 
 ## Contributing
-a
+dd
 
 ## Tests
-s
+d
 
 ## License
-![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
- Open Source License Info: https://opensource.org/licenses/Mozilla
+ Open Source License Info: https://opensource.org/licenses/MIT
 
 ## Questions
-If you have any questions, please feel free to reach out at s and a.
+If you have any questions, please feel free to reach out at d and d.
